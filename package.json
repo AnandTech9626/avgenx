@@ -1,0 +1,41 @@
+{
+  "name": "avgenx-academy",
+  "version": "2.3.0",
+  "description": "AVGENX Academy: coding institute learning platform with server-verified sign-in",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run test:unit && npm run build && npm run test:e2e",
+    "build": "node build.mjs",
+    "dev": "node build.mjs --dev && node --disable-warning=ExperimentalWarning server/index.mjs",
+    "lint": "node scripts/lint.mjs",
+    "test:unit": "node --disable-warning=ExperimentalWarning --test tests/unit/*.test.mjs",
+    "test:e2e": "playwright test",
+    "test:smoke": "node scripts/smoke.mjs",
+    "test:a11y": "node scripts/a11y.mjs",
+    "start": "node --disable-warning=ExperimentalWarning server/index.mjs",
+    "preview": "node scripts/serve.mjs",
+    "accounts": "node --disable-warning=ExperimentalWarning server/cli.mjs",
+    "seed:dev": "node --disable-warning=ExperimentalWarning server/cli.mjs seed-dev",
+    "test:load": "node --disable-warning=ExperimentalWarning scripts/load-test.mjs 100 2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "axe-core": "^4.10.0",
+    "codemirror": "^5.65.18",
+    "esbuild": "^0.28.2"
+  },
+  "type": "module",
+  "dependencies": {
+    "argon2": "^0.44.0",
+    "exceljs": "^4.4.0"
+  },
+  "overrides": {
+    "uuid": "^11.1.1"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

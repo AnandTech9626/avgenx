@@ -1,0 +1,6 @@
+# Copy to /etc/caddy/Caddyfile and replace the domain. Caddy gets and renews the HTTPS
+# certificate automatically once the domain's DNS points at this server.
+lms.yourdomain.com {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:8080
+}

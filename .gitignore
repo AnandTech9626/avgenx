@@ -1,0 +1,15 @@
+node_modules/
+dist/
+shots/
+test-results/
+playwright-report/
+.env
+# Account database (contains password hashes and sessions); never commit it.
+data/
+*.db
+*.db-wal
+*.db-shm
+# Account list with temporary passwords: private to the server.
+accounts.xlsx
+~$accounts.xlsx
+backups/

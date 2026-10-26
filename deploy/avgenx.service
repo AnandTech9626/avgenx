@@ -1,0 +1,23 @@
+# systemd unit for AVGENX Academy. Copy to /etc/systemd/system/avgenx.service
+# Assumes the app lives in /opt/avgenx-academy and runs as the "avgenx" user.
+[Unit]
+Description=AVGENX Academy
+After=network.target
+
+[Service]
+Type=simple
+User=avgenx
+WorkingDirectory=/opt/avgenx-academy
+EnvironmentFile=/etc/avgenx.env
+ExecStart=/usr/bin/node --disable-warning=ExperimentalWarning server/index.mjs
+Restart=on-failure
+RestartSec=3
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/avgenx-academy/data /opt/avgenx-academy/backups /opt/avgenx-academy
+
+[Install]
+WantedBy=multi-user.target

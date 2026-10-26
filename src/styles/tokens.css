@@ -1,0 +1,48 @@
+/* AVGENX design tokens.
+   Layout concept: graphite left rail with grouped navigation, off-white working canvas,
+   green as the single action colour, pencil-yellow for "human" marks (streaks, seals, highlights),
+   graph-paper texture reserved for course covers and the code stage. */
+:root{
+  --bg:#F3F5F4; --surface:#FFFFFF; --raised:#FFFFFF; --sunk:#E9EEEC; --line:#D6DEDB; --line-strong:#B9C6C1;
+  --ink:#121C18; --ink-2:#2B3833; --muted:#5A6A63; --faint:#7F8E88;
+  --accent:#1D6B58; --accent-hover:#175747; --accent-ink:#FFFFFF; --accent-soft:#DCEDE6; --accent-line:#9CCAB9;
+  --rail:#15201C; --rail-2:#1D2A25; --rail-ink:#DDE8E3; --rail-muted:#8FA39A; --rail-active:#2A3B34;
+  --pencil:#E3A21F; --pencil-ink:#2A1E04; --pencil-soft:#FBEFD2;
+  --stage:#0F1A16; --stage-2:#16231E; --stage-ink:#E3EEE9; --stage-muted:#8BA097;
+  --ok:#22663F; --ok-soft:#DDF1E4; --warn:#8A5000; --warn-soft:#FAEBCB; --bad:#B0281F; --bad-soft:#F9DEDB; --info:#2D5BA3; --info-soft:#E1E9F7;
+  --d-prog:#1D6B58; --d-web:#2D5BA3; --d-data:#3C6E8F; --d-ai:#7A4FA0; --d-sap:#1F6F8B; --d-cloud:#B5552A; --d-sec:#A23A62; --d-mobile:#8A6A12; --d-arch:#4D6B1F;
+  --s1:#1D6B58; --s2:#2D5BA3; --s3:#B5552A; --s4:#7A4FA0; --s5:#8A6A12;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Figtree","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --t-xs:.72rem; --t-sm:.82rem; --t-md:.92rem; --t-base:15px; --t-lg:1.08rem; --t-xl:1.3rem; --t-2xl:1.7rem; --t-3xl:2.2rem;
+  --r-sm:6px; --r:10px; --r-lg:14px;
+  --shadow:0 1px 2px rgba(18,28,24,.06),0 6px 24px rgba(18,28,24,.07);
+  --shadow-lg:0 12px 48px rgba(18,28,24,.18);
+  --rail-w:248px; --top-h:60px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0D1412; --surface:#141E1B; --raised:#18241F; --sunk:#1B2824; --line:#26342F; --line-strong:#36473F;
+  --ink:#E4EDE9; --ink-2:#C6D3CD; --muted:#93A59E; --faint:#82958D;
+  --accent:#4FC3A1; --accent-hover:#6BD1B2; --accent-ink:#04211A; --accent-soft:#183830; --accent-line:#2F6B5A;
+  --rail:#0A100E; --rail-2:#111A17; --rail-ink:#D8E5DF; --rail-muted:#7F948B; --rail-active:#1C2B26;
+  --pencil:#F0BC52; --pencil-ink:#2A1E04; --pencil-soft:#3A2D12;
+  --stage:#070C0A; --stage-2:#0E1714; --stage-ink:#E3EEE9; --stage-muted:#8BA097;
+  --ok:#6CD394; --ok-soft:#163626; --warn:#F2B654; --warn-soft:#38290F; --bad:#FF8A80; --bad-soft:#3B1C19; --info:#8DB4F2; --info-soft:#18284A;
+  --d-prog:#4FC3A1; --d-web:#8DB4F2; --d-data:#86BEDF; --d-ai:#C7A2EA; --d-sap:#6FC6DE; --d-cloud:#F0996E; --d-sec:#EE93B6; --d-mobile:#D9C46A; --d-arch:#A9CF73;
+  --s1:#4FC3A1; --s2:#8DB4F2; --s3:#F0996E; --s4:#C7A2EA; --s5:#D9C46A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.3); --shadow-lg:0 12px 48px rgba(0,0,0,.55);
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0D1412; --surface:#141E1B; --raised:#18241F; --sunk:#1B2824; --line:#26342F; --line-strong:#36473F;
+  --ink:#E4EDE9; --ink-2:#C6D3CD; --muted:#93A59E; --faint:#82958D;
+  --accent:#4FC3A1; --accent-hover:#6BD1B2; --accent-ink:#04211A; --accent-soft:#183830; --accent-line:#2F6B5A;
+  --rail:#0A100E; --rail-2:#111A17; --rail-ink:#D8E5DF; --rail-muted:#7F948B; --rail-active:#1C2B26;
+  --pencil:#F0BC52; --pencil-ink:#2A1E04; --pencil-soft:#3A2D12;
+  --stage:#070C0A; --stage-2:#0E1714; --stage-ink:#E3EEE9; --stage-muted:#8BA097;
+  --ok:#6CD394; --ok-soft:#163626; --warn:#F2B654; --warn-soft:#38290F; --bad:#FF8A80; --bad-soft:#3B1C19; --info:#8DB4F2; --info-soft:#18284A;
+  --d-prog:#4FC3A1; --d-web:#8DB4F2; --d-data:#86BEDF; --d-ai:#C7A2EA; --d-sap:#6FC6DE; --d-cloud:#F0996E; --d-sec:#EE93B6; --d-mobile:#D9C46A; --d-arch:#A9CF73;
+  --s1:#4FC3A1; --s2:#8DB4F2; --s3:#F0996E; --s4:#C7A2EA; --s5:#D9C46A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.3); --shadow-lg:0 12px 48px rgba(0,0,0,.55);
+  color-scheme:dark }
