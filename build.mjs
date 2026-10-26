@@ -69,6 +69,7 @@ const out = {
   'app.html': doc({ title: 'AVGENX Academy', description: 'AVGENX Academy learning platform.', ...app, body: APP_BODY }),
   'login.html': doc({ title: 'Sign in · AVGENX Academy', description: 'Sign in to AVGENX Academy.', ...login, body: '<div id="app"><noscript><p style="padding:24px;color:#fff">AVGENX Academy needs JavaScript enabled to sign in.</p></noscript></div>' }),
   'preview.html': doc({ title: 'AVGENX Academy (preview)', description: 'Preview of AVGENX Academy with sample data. No real accounts.', ...preview, body: APP_BODY }),
+  'index.html': doc({ title: 'AVGENX Academy (preview)', description: 'Preview of AVGENX Academy with sample data. No real accounts.', ...preview, body: APP_BODY }),
 };
 for (const [f, html] of Object.entries(out)) writeFileSync(`dist/${f}`, html);
 writeFileSync('dist/artifact.html', `<title>AVGENX Academy (preview)</title>\n<meta name="description" content="Preview of AVGENX Academy with sample data. No real accounts.">\n<meta name="claude:viewport-fit-sides" content="cover">\n${FONTS}\n<style>${preview.css}</style>\n${APP_BODY}\n<script>${preview.js}</script>\n`);
