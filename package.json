@@ -16,7 +16,8 @@
     "preview": "node scripts/serve.mjs",
     "accounts": "node --disable-warning=ExperimentalWarning server/cli.mjs",
     "seed:dev": "node --disable-warning=ExperimentalWarning server/cli.mjs seed-dev",
-    "test:load": "node --disable-warning=ExperimentalWarning scripts/load-test.mjs 100 2"
+    "test:load": "node --disable-warning=ExperimentalWarning scripts/load-test.mjs 100 2",
+    "deploy:pages": "node build.mjs && npx wrangler pages deploy dist --project-name avgenx-academy"
   },
   "keywords": [],
   "author": "",
